@@ -16,6 +16,9 @@
 		DD2892EB22F01B4000793F36 /* CellDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2892EA22F01B4000793F36 /* CellDefault.swift */; };
 		DD2892EE22F0224D00793F36 /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2892ED22F0224D00793F36 /* FetchData.swift */; };
 		DD2892F022F026D300793F36 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2892EF22F026D300793F36 /* ViewModel.swift */; };
+		DD2892F222F164E300793F36 /* CellDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2892F122F164E300793F36 /* CellDirection.swift */; };
+		DD2892F422F1650B00793F36 /* SegViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2892F322F1650B00793F36 /* SegViewModel.swift */; };
+		DD2892F822F1656200793F36 /* SegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2892F722F1656200793F36 /* SegViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		DD2892EA22F01B4000793F36 /* CellDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDefault.swift; sourceTree = "<group>"; };
 		DD2892ED22F0224D00793F36 /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
 		DD2892EF22F026D300793F36 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		DD2892F122F164E300793F36 /* CellDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDirection.swift; sourceTree = "<group>"; };
+		DD2892F322F1650B00793F36 /* SegViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegViewModel.swift; sourceTree = "<group>"; };
+		DD2892F722F1656200793F36 /* SegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				DD2892EA22F01B4000793F36 /* CellDefault.swift */,
+				DD2892F122F164E300793F36 /* CellDirection.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -96,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				DD2892EF22F026D300793F36 /* ViewModel.swift */,
+				DD2892F322F1650B00793F36 /* SegViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -104,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				DD2892D422EF2E0000793F36 /* ViewController.swift */,
+				DD2892F722F1656200793F36 /* SegViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -187,11 +196,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD2892F422F1650B00793F36 /* SegViewModel.swift in Sources */,
 				DD2892D522EF2E0000793F36 /* ViewController.swift in Sources */,
 				DD2892EB22F01B4000793F36 /* CellDefault.swift in Sources */,
 				DD2892EE22F0224D00793F36 /* FetchData.swift in Sources */,
+				DD2892F822F1656200793F36 /* SegViewController.swift in Sources */,
 				DD2892E922F01A2800793F36 /* Student.swift in Sources */,
 				DD2892F022F026D300793F36 /* ViewModel.swift in Sources */,
+				DD2892F222F164E300793F36 /* CellDirection.swift in Sources */,
 				DD2892D322EF2DFF00793F36 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

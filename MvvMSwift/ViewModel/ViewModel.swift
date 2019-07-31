@@ -57,6 +57,14 @@ class ViewModel : NSObject {
         return stud
     }
     
+    func getAndSetStudentAtSegViewModel(_ indexPath: IndexPath){
+        let sectionName = allGroupNames[indexPath.section]
+        let arrayStuds = studentsDict[sectionName]
+        let stud = arrayStuds![indexPath.row]
+        
+        SegViewModel.student = stud
+    }
+    
     
     
     

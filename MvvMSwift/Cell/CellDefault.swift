@@ -13,7 +13,6 @@ class CellDefault: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var lastName: UILabel!
     
-    
     func setupCell(withStudent student : Student){
         self.name.text = student.firstName
         self.lastName.text = student.lastName

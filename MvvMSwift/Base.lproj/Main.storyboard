@@ -51,8 +51,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="lastName" destination="JSV-iI-2er" id="MbJ-Et-5Ai"/>
-                                            <outlet property="name" destination="Iap-LV-bdh" id="wnV-cM-eba"/>
+                                            <outlet property="lastName" destination="JSV-iI-2er" id="Lo1-jl-lYn"/>
+                                            <outlet property="name" destination="Iap-LV-bdh" id="5Ez-NG-YA7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -71,7 +71,7 @@
                     <connections>
                         <outlet property="tableView" destination="721-Vx-Vkg" id="tVt-pu-6ph"/>
                         <outlet property="viewModel" destination="JiX-kg-9dF" id="ic4-dA-hEH"/>
-                        <segue destination="Ufd-UQ-c0C" kind="show" id="VHV-e1-fzv"/>
+                        <segue destination="Ufd-UQ-c0C" kind="show" identifier="SegueInfo" id="VHV-e1-fzv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -82,12 +82,12 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="914" y="137"/>
+            <point key="canvasLocation" x="913.04347826086962" y="136.60714285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Seg View Controller-->
         <scene sceneID="KPf-yZ-Iv8">
             <objects>
-                <viewController id="Ufd-UQ-c0C" sceneMemberID="viewController">
+                <viewController id="Ufd-UQ-c0C" customClass="SegViewController" customModule="MvvMSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i4z-aE-gdg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,36 +96,58 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="182" id="cZo-gX-lcB">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="182"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellDirection" rowHeight="177" id="cZo-gX-lcB" customClass="CellDirection" customModule="MvvMSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="177"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cZo-gX-lcB" id="OE7-HD-CaI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="181.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="176.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWS-xx-ppm">
-                                                    <rect key="frame" x="20" y="11" width="76" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWS-xx-ppm">
+                                                    <rect key="frame" x="20" y="11" width="76" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="76" id="Ifg-Dl-i7O"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ka-58-pFl">
-                                                    <rect key="frame" x="20" y="48" width="76" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ka-58-pFl">
+                                                    <rect key="frame" x="20" y="39.5" width="68.5" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.5" id="YwD-z2-2Zi"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1k-ib-Z8D">
-                                                    <rect key="frame" x="20" y="142" width="76" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1k-ib-Z8D">
+                                                    <rect key="frame" x="20" y="142" width="30" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.5" id="vWQ-xl-rg1"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5ka-58-pFl" firstAttribute="top" secondItem="tWS-xx-ppm" secondAttribute="bottom" constant="8" id="NLl-Eg-Ixi"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="x1k-ib-Z8D" secondAttribute="bottom" constant="3.5" id="SVY-oi-v3u"/>
+                                                <constraint firstItem="5ka-58-pFl" firstAttribute="leading" secondItem="OE7-HD-CaI" secondAttribute="leadingMargin" id="Uf0-e7-T2D"/>
+                                                <constraint firstItem="x1k-ib-Z8D" firstAttribute="top" secondItem="5ka-58-pFl" secondAttribute="bottom" constant="82" id="XRI-dd-vRV"/>
+                                                <constraint firstItem="tWS-xx-ppm" firstAttribute="top" secondItem="OE7-HD-CaI" secondAttribute="topMargin" id="b3h-e8-IIb"/>
+                                                <constraint firstItem="tWS-xx-ppm" firstAttribute="leading" secondItem="OE7-HD-CaI" secondAttribute="leadingMargin" id="e0T-gT-85y"/>
+                                                <constraint firstItem="5ka-58-pFl" firstAttribute="top" secondItem="tWS-xx-ppm" secondAttribute="bottom" constant="8" id="nRu-Cs-3VG"/>
+                                                <constraint firstItem="x1k-ib-Z8D" firstAttribute="top" secondItem="5ka-58-pFl" secondAttribute="bottom" constant="82" id="zNo-rx-Inh"/>
+                                                <constraint firstItem="x1k-ib-Z8D" firstAttribute="leading" secondItem="OE7-HD-CaI" secondAttribute="leadingMargin" id="zd5-wh-J22"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="age" destination="x1k-ib-Z8D" id="GJc-Bg-knJ"/>
+                                            <outlet property="lastName" destination="5ka-58-pFl" id="pzI-ty-jYG"/>
+                                            <outlet property="name" destination="tWS-xx-ppm" id="v6f-Q1-DfS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -139,8 +161,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VSu-mU-nYu"/>
                     </view>
+                    <connections>
+                        <outlet property="segViewModel" destination="z1b-gq-4vO" id="s1z-NB-Lah"/>
+                        <outlet property="tableView" destination="ygM-Bh-8mW" id="Urc-TO-Mer"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5W7-9J-7Fe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="z1b-gq-4vO" customClass="SegViewModel" customModule="MvvMSwift" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1582.608695652174" y="140.625"/>
         </scene>
